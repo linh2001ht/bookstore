@@ -12,6 +12,12 @@ services:
     environment:
     - "SECRET_KEY=django-insecure-7gz^%l&z)yud*-y%d6=%dgf!5lo0wq)*dplrh_7+ym_+=f21_("
     - "DJANGO_DEBUG=True"
+    - "DJANGO_SECURE_SSL_REDIRECT=False"
+    - "DJANGO_SECURE_HSTS_SECONDS=0"
+    - "DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS=False" 
+    - "DJANGO_SECURE_HSTS_PRELOAD=False" 
+    - "DJANGO_SESSION_COOKIE_SECURE=False"
+    - "DJANGO_CSRF_COOKIE_SECURE=False"
   db:
     image: postgres:13
     volumes:
